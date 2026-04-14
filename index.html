@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSV Sports Academy — Kochi | Badminton, Archery, Basketball, Roller Skating</title>
+  <meta name="description"
+    content="PSV Sports Academy, Kochi — structured coaching and play sessions for adults and kids. Badminton, Archery, Basketball, Roller Skating. Book a free demo today.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="PSV Sports Academy — Kochi">
+  <meta property="og:description"
+    content="Structured coaching and play sessions for adults and kids. Book your free demo session today.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prosportsventures.in">
+  <link rel="icon" type="image/png" href="transparent.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --bg: #0B0B0C;
+      --surface: #121214;
+      --card: #1A1B1E;
+      --border: rgba(255, 255, 255, 0.07);
+      --gold: #FFB020;
+      --gold2: #FFC857;
+      --white: #FFFFFF;
+      --muted: #9CA3AF;
+      --r: 14px;
+      --r-sm: 10px;
+      --max: 1200px;
+    }
+
+    /* ── RESET ── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TYPOGRAPHY HELPERS ── */
+    em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 48px;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    section {
+      padding: 96px 0;
+    }
+
+    /* ── TOGGLE ── */
+
+    .toggle-text {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      /* 👈 tighter spacing */
+      letter-spacing: 0.3px;
+    }
+
+    .toggle-text .arrow {
+      font-size: 12px;
+      transition: transform 0.25s ease;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      padding: 14px 48px;
+      background: rgba(11, 11, 12, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      transition: padding .3s;
+    }
+
+    nav.scrolled {
+      padding: 10px 48px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      min-width: 0;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+      max-width: 200px;
+      /* prevent infinite stretch */
+      object-fit: contain;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-text {
+      display: none;
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex: 1;
+      margin-left: 28px;
+      min-width: 0;
+    }
+
+    .nav-links-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: .3px;
+      opacity: .6;
+      transition: opacity .2s;
+    }
+
+    .nav-links-group-right a {
+      opacity: 1;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: #000 !important;
+      opacity: 1 !important;
+      padding: 9px 22px;
+      border-radius: var(--r-sm);
+      font-weight: 700;
+      font-size: 13px;
+      transition: background .2s, transform .15s, box-shadow .15s;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold2) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 176, 32, .3);
+    }
+
+    .nav-ghost-btn {
+      padding: 9px 22px;
+      border-radius: var(--r-sm);
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--white) !important;
+      opacity: 1 !important;
+      border: 1px solid rgba(255, 255, 255, .2);
+      background: transparent;
+      text-decoration: none;
+      transition: background .2s, border-color .2s, transform .15s;
+    }
+
+    .nav-ghost-btn:hover {
+      background: rgba(255, 255, 255, .07);
+      border-color: rgba(255, 255, 255, .35);
+      transform: translateY(-2px);
+    }
+
+    .nav-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--r-sm);
+      border: 1px solid rgba(255, 255, 255, .15);
+      background: rgba(255, 255, 255, .05);
+      color: var(--white) !important;
+      opacity: 1 !important;
+      font-weight: 600;
+      transition: transform .15s, box-shadow .15s, background .2s, border-color .2s;
+    }
+
+    .nav-whatsapp:hover {
+      background: rgba(37, 211, 102, .1);
+      border-color: rgba(37, 211, 102, .4);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, .2);
+    }
+
+    .nav-whatsapp img.wa-logo {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: .3s;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: var(--r-sm);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .3px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      min-width: 170px;
+      transition: transform .15s cubic-bezier(.34, 1.56, .64, 1), box-shadow .15s, background .15s;
+    }
+
+    .btn:active {
+      transform: scale(.97) !important;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      color: #000;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(255, 176, 32, .35);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, .06);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, .11);
+      transform: translateY(-3px);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 130px;
+      padding-bottom: 60px;
+      /* add some bottom padding for balance */
+      background:
+        linear-gradient(to right, rgba(11, 11, 12, .90) 45%, rgba(11, 11, 12, .55)),
+        url('https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=90&w=1800&auto=format&fit=crop') center / cover no-repeat;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 620px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .55);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(44px, 6.5vw, 82px);
+      font-weight: 800;
+      line-height: 1.04;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, .58);
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+
+    .hero-about {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+
+    .hero-sports {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+      opacity: 0.8;
+      /* 👈 subtle */
+    }
+
+    .hero-sports span {
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      color: rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      /* 👈 adds space above sport buttons */
+    }
+
+    .hero-sport-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* 👈 equal distribution */
+      gap: 12px;
+      margin-top: 12px;
+      width: 100%;
+      max-width: 360px;
+      /* 👈 same visual width as buttons */
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .sport-btn {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      /* 👈 perfect square */
+      max-width: 364px;
+      border-radius: 14px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+
+      font-size: 20px;
+      text-decoration: none;
+      color: var(--white);
+
+      transition: all 0.2s ease;
+    }
+
+    .sport-btn:hover {
+      border-color: rgba(255, 176, 32, 0.4);
+      background: rgba(255, 176, 32, 0.08);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .sport-chevron {
+      font-size: 20px;
+      /* was 16px */
+      color: rgba(255, 255, 255, .4);
+      transition: transform .3s, color .3s;
+      flex-shrink: 0;
+    }
+
+    .sport-row:hover .sport-chevron {
+      color: var(--gold);
+    }
+
+    .sport-row.open .sport-chevron {
+      transform: rotate(180deg);
+      color: var(--gold);
+    }
+
+    .hero-proof {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .45);
+    }
+
+    .hero-proof span {
+      color: var(--gold);
+    }
+
+    /* ── COURT BOOKING STRIP ── */
+    .court-strip {
+      background: var(--surface);
+      border: none;
+      padding: 56px 0;
+      text-align: center;
+    }
+
+    .court-strip h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .court-strip p {
+      color: var(--muted);
+      margin-bottom: 32px;
+      font-size: 15px;
+    }
+
+    .court-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── SPORTS ACCORDION ── */
+    .sports-section {
+      background: var(--bg);
+    }
+
+    .sports-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .sport-row {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+
+    .sport-row:hover {
+      border-color: rgba(255, 176, 32, .25);
+    }
+
+    .sport-row.open {
+      border-color: rgba(255, 176, 32, .3);
+    }
+
+    .sport-row-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 28px;
+    }
+
+    .sport-icon {
+      font-size: 30px;
+      flex-shrink: 0;
+    }
+
+    .sport-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      flex: 1;
+    }
+
+    .sport-tag {
+      font-size: 11px;
+      color: var(--gold);
+      background: rgba(255, 176, 32, .08);
+      border: 1px solid rgba(255, 176, 32, .2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .sport-row.open .sport-tag {
+      background: rgba(255, 176, 32, 0.15);
+    }
+
+    .sport-row.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .sport-chevron {
+      font-size: 16px;
+      color: var(--muted);
+      transition: transform .3s;
+      flex-shrink: 0;
+    }
+
+    .sport-row.open .sport-chevron {
+      transform: rotate(180deg);
+      color: var(--gold);
+    }
+
+    .sport-body {
+      display: none;
+      padding: 0 28px 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .sport-row.open .sport-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      padding-top: 24px;
+    }
+
+    .info-block h4 {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .info-item span {
+      color: rgba(255, 255, 255, .6);
+      line-height: 1.6;
+    }
+
+    .info-item span strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .pkg-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .pkg-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, .03);
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    .pkg-row span:last-child {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .pkg-subhead {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 14px 0 8px;
+      font-weight: 700;
+    }
+
+    .enroll-link {
+      display: inline-flex;
+      align-items: center;
+      grid-column: 1 / -1;
+      margin-top: 8px;
+      background: var(--gold);
+      color: #000;
+      padding: 11px 26px;
+      border-radius: var(--r-sm);
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      width: fit-content;
+      transition: background .15s, transform .15s cubic-bezier(.34, 1.56, .64, 1);
+    }
+
+    .enroll-link:hover {
+      background: var(--gold2);
+      transform: translateY(-2px);
+    }
+
+    .play-block {
+      margin-top: 10px;
+    }
+
+    .play-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, .03);
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    .play-row span:last-child {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .play-note {
+      font-size: 12px;
+      color: rgba(255, 255, 255, .5);
+      margin: 6px 2px 12px;
+    }
+
+    .play-extra {
+      font-size: 12px;
+      color: rgba(255, 255, 255, .6);
+      margin-top: 6px;
+    }
+
+    /* ── FOR Adults (conversion section) ── */
+    .adult-section {
+      background: var(--surface);
+      padding-bottom: 120px;
+      /* 👈 increase */
+    }
+
+
+    .adult-intro {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.6);
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .adult-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .adult-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 24px;
+      transition: 0.2s;
+    }
+
+    .adult-card:hover {
+      border-color: rgba(255, 176, 32, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .adult-card h4 {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .adult-card p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.7;
+    }
+
+    /* ── WHY US ── */
+    .why-section {
+      background: var(--bg);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .why-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 28px 24px;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .why-card:hover {
+      border-color: rgba(255, 176, 32, .25);
+      transform: translateY(-4px);
+    }
+
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(255, 176, 32, .08);
+      border: 1px solid rgba(255, 176, 32, .15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .why-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, .5);
+    }
+
+    /* ── FORM ── */
+    .form-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .form-left h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(36px, 4.5vw, 58px);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .form-left>p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, .5);
+      margin-bottom: 36px;
+      max-width: 420px;
+    }
+
+    .contact-pill {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: var(--white);
+      transition: border-color .2s, transform .15s;
+    }
+
+    .contact-pill:hover {
+      border-color: rgba(255, 176, 32, .3);
+      transform: translateX(4px);
+    }
+
+    .pill-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255, 176, 32, .08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .pill-label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .pill-val {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+
+    .form-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+    }
+
+    .form-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .form-card>p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .fg {
+      margin-bottom: 14px;
+    }
+
+    .fg label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .fg input,
+    .fg select {
+      width: 100%;
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .08);
+      color: var(--white);
+      padding: 11px 14px;
+      border-radius: var(--r-sm);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      transition: border-color .2s, background .2s;
+      appearance: none;
+    }
+
+    .fg input:focus,
+    .fg select:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: rgba(255, 176, 32, .04);
+    }
+
+    .fg input::placeholder {
+      color: rgba(255, 255, 255, .2);
+    }
+
+    .fg select option {
+      background: #1a1a1a;
+    }
+
+    .fg-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .phone-row {
+      display: flex;
+      gap: 8px;
+      position: relative;
+    }
+
+    .phone-row input {
+      flex: 1;
+    }
+
+    .cc-picker {
+      position: relative;
+      width: 110px;
+      flex-shrink: 0;
+    }
+
+    .cc-trigger {
+      width: 100%;
+      height: 100%;
+      min-height: 44px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      padding: 0 28px 0 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: border-color .2s;
+      user-select: none;
+    }
+
+    .cc-trigger::after {
+      content: '';
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid var(--muted);
+      pointer-events: none;
+    }
+
+    .cc-trigger:hover,
+    .cc-trigger.open {
+      border-color: var(--gold);
+    }
+
+    .cc-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      width: 260px;
+      background: #1e1e22;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: var(--r-sm);
+      z-index: 200;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, .6);
+      overflow: hidden;
+    }
+
+    .cc-dropdown.open {
+      display: block;
+    }
+
+    .cc-search {
+      width: 100%;
+      background: rgba(255, 255, 255, .06);
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      padding: 10px 12px;
+      outline: none;
+    }
+
+    .cc-search::placeholder {
+      color: rgba(255, 255, 255, .3);
+    }
+
+    .cc-list {
+      max-height: 200px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 176, 32, .3) transparent;
+    }
+
+    .cc-list::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .cc-list::-webkit-scrollbar-thumb {
+      background: rgba(255, 176, 32, .3);
+      border-radius: 4px;
+    }
+
+    .cc-option {
+      padding: 9px 12px;
+      font-size: 13px;
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background .15s;
+    }
+
+    .cc-option:hover,
+    .cc-option.active {
+      background: rgba(255, 176, 32, .12);
+      color: var(--gold);
+    }
+
+    .cc-option .cc-dial {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .cc-option.active .cc-dial {
+      color: var(--gold);
+    }
+
+    .cc-empty {
+      padding: 12px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      color: #000;
+      border: none;
+      padding: 14px;
+      border-radius: var(--r-sm);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 6px;
+      transition: transform .15s cubic-bezier(.34, 1.56, .64, 1), box-shadow .15s;
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 176, 32, .3);
+    }
+
+    .form-submit:active {
+      transform: scale(.98);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 0;
+    }
+
+    .form-success .s-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+      animation: popIn .4s cubic-bezier(.34, 1.56, .64, 1);
+    }
+
+    .form-success h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .form-success p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .wa-note {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .wa-note a {
+      color: #25D366;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+
+    /* ── About ── */
+    .about-section {
+      background: var(--bg);
+      padding-top: 120px;
+      /* 👈 increase */
+    }
+
+    .about-text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.55);
+      /* 👈 slightly softer */
+      max-width: 640px;
+    }
+
+    .about-section .section-title {
+      margin-bottom: 28px;
+      /* tighter than adult */
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: var(--surface);
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      max-width: 740px;
+    }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+    }
+
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 500;
+      gap: 16px;
+      transition: color .2s;
+    }
+
+    .faq-q:hover {
+      color: var(--gold);
+    }
+
+    .faq-q span {
+      font-size: 20px;
+      color: var(--muted);
+      transition: transform .3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-q span {
+      transform: rotate(45deg);
+      color: var(--gold);
+    }
+
+    .faq-a {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, .5);
+    }
+
+    .faq-item.open .faq-a {
+      display: block;
+    }
+
+    /* ── CONTACT STRIP ── */
+    .contact-strip {
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      padding: 52px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    .contact-strip-left h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: #000;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .contact-strip-left p {
+      font-size: 14px;
+      color: rgba(0, 0, 0, .65);
+    }
+
+    .contact-strip-right {
+      text-align: right;
+    }
+
+    .contact-strip-right .label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, .6);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact-strip-right .addr {
+      font-size: 13px;
+      color: rgba(0, 0, 0, .75);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .maps-btn {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+
+    .maps-btn:hover {
+      background: rgba(0, 0, 0, .75);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface);
+      padding: 36px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-logo img {
+      height: 34px;
+      width: auto;
+    }
+
+    .footer-logo-text {
+      display: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 3px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 860px) {
+      .wa-float {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 24px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #25D366;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, .45);
+        z-index: 999;
+        transition: transform .2s, box-shadow .2s;
+      }
+
+      .wa-float:hover {
+        transform: scale(1.08);
+        box-shadow: 0 6px 28px rgba(37, 211, 102, .6);
+      }
+
+      .wa-float img {
+        width: 32px;
+        height: 32px;
+      }
+
+      nav {
+        padding: 12px 20px;
+        justify-content: space-between;
+      }
+
+      nav.scrolled {
+        padding: 10px 20px;
+      }
+
+      .nav-links {
+        display: none;
+        margin-left: 0;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(11, 11, 12, .97);
+        padding: 20px 24px;
+        gap: 18px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .nav-left {
+        gap: 16px;
+      }
+
+      .nav-logo img {
+        height: 46px;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+
+      .form-wrap {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .sport-row.open .sport-body {
+        grid-template-columns: 1fr;
+      }
+
+      .fg-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-strip {
+        padding: 36px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .contact-strip-right {
+        text-align: left;
+      }
+
+      footer {
+        padding: 28px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .court-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-left">
+      <a href="#" class="nav-logo" aria-label="PSV home">
+        <img src="transparent.png" alt="PSV"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="nav-logo-text">PSV</span>
+      </a>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-links-group nav-links-group-left">
+        <a href="#about">About Us</a>
+        <a href="#sports">Sports</a>
+      </div>
+      <div class="nav-links-group nav-links-group-right">
+        <a href="https://wa.me/919509502000" target="_blank" class="nav-whatsapp" aria-label="WhatsApp us">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-logo">
+          <span>WhatsApp Us</span>
+        </a>
+        <a href="#book-court" class="nav-cta">Book Court</a>
+        <a href="#enroll" class="nav-cta">Book Free Demo</a>
+      </div>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">Pro Sports Ventures — Kochi, Kerala</div>
+        <h1>Play Better,<br><em>Live Stronger.</em></h1>
+        <p class="hero-sub">
+          Structured coaching and play sessions designed for adults and kids to stay active, reduce stress, and build
+          consistency through sport.
+        </p>
+
+        <p class="hero-about">
+          Built for adults who want fitness, routine, and a strong sporting lifestyle.<br>
+        </p>
+        <div class="hero-btns">
+          <a href="#enroll" class="btn btn-gold">Book Free Demo</a>
+          <a href="#book-court" class="btn btn-gold">Book a Court</a>
+        </div>
+        <div class="hero-sport-buttons">
+          <a href="#sport-badminton" class="sport-btn" onclick="openSport('badminton')">🏸</a>
+          <a href="#sport-archery" class="sport-btn" onclick="openSport('archery')">🏹</a>
+          <a href="#sport-basketball" class="sport-btn" onclick="openSport('basketball')">🏀</a>
+          <a href="#sport-skating" class="sport-btn" onclick="openSport('skating')">🛼</a>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="enroll">
+    <div class="container">
+      <div class="form-wrap">
+        <div class="form-left">
+          <span class="eyebrow">Get Started</span>
+          <h2>Book Your <em>Free Demo</em> Today</h2>
+          <p>Fill in the form and our team will call you back within 24 hours to confirm your session.</p>
+          <a href="tel:+919509502000" class="contact-pill">
+            <div class="contact-pill-icon">📞</div>
+            <div>
+              <div class="contact-pill-text">Call us directly</div>
+              <div class="contact-pill-val">+91 9509502000</div>
+            </div>
+          </a>
+          <a href="https://wa.me/919509502000" target="_blank" class="contact-pill">
+            <div class="contact-pill-icon">💬</div>
+            <div>
+              <div class="contact-pill-text">WhatsApp</div>
+              <div class="contact-pill-val">+91 9509502000</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="form-card">
+          <h3>Free Demo Session</h3>
+          <p>We'll call you within 24 hours to confirm</p>
+          <form id="leadForm">
+            <div class="fg-row">
+              <div class="fg">
+                <label for="fname">Your Name *</label>
+                <input type="text" id="fname" placeholder="Your name" required>
+              </div>
+              <div class="fg">
+                <label for="fphone">Mobile Number *</label>
+                <div class="phone-row">
+                  <div class="cc-picker" id="ccPicker">
+                    <div class="cc-trigger" id="ccTrigger" tabindex="0">🇮🇳 +91</div>
+                    <div class="cc-dropdown" id="ccDropdown">
+                      <input class="cc-search" id="ccSearch" placeholder="Search country…" autocomplete="off">
+                      <div class="cc-list" id="ccList"></div>
+                    </div>
+                  </div>
+                  <input type="hidden" id="fcountry" value="+91">
+                  <input type="tel" id="fphone" placeholder="Phone number" required>
+                </div>
+              </div>
+            </div>
+            <div class="fg">
+              <label for="fsport">Sport Interested In *</label>
+              <select id="fsport" required>
+                <option value="" disabled selected>Select a sport</option>
+                <option value="Badminton - Coaching">🏸 Badminton — Coaching</option>
+                <option value="Badminton - Court Booking">🏸 Badminton — Court Booking</option>
+                <option value="Badminton - Play Sessions">🏸 Badminton — Play Sessions</option>
+                <option value="Archery">🏹 Archery</option>
+                <option value="Basketball">🏀 Basketball</option>
+                <option value="Roller Skating">🛼 Roller Skating</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="flocation">Your Area / Location</label>
+              <input type="text" id="flocation" placeholder="Vazhakkala, Kakkanad...">
+            </div>
+            <button type="submit" class="form-submit">Book Free Demo →</button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <span class="s-icon">🎉</span>
+            <h3>You're Registered!</h3>
+            <p>Our team will call you within 24 hours. See you on the court!</p>
+          </div>
+          <div class="wa-note">Or message us on <a href="https://wa.me/919509502000" target="_blank">WhatsApp</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPORTS ACCORDION -->
+  <section class="sports-section" id="sports">
+    <div class="container">
+      <span class="eyebrow">What We Offer</span>
+      <h2 class="section-title">Choose Your <em>Sport</em></h2>
+      <div class="sports-list">
+
+        <div class="sport-row" id="sport-badminton" data-sport="badminton" onclick="toggleSport(this)">
+          <div class="sport-row-header">
+            <span class="sport-icon">🏸</span>
+            <span class="sport-name">Badminton</span>
+            <span class="toggle-text">More</span>
+            <span class="sport-chevron">▾</span>
+          </div>
+          <div class="sport-body">
+            <div class="info-block">
+              <h4>Timings & Location</h4>
+              <div class="info-item"><span>📍</span><span><strong>2 Locations:</strong> Shareca Lane, Vazhakkala & Nava
+                  Sports Center, Desiyamukku</span></div>
+              <div class="info-item"><span>⏰</span><span><strong>Adults:</strong> 6:30–8:30 AM | 7:30–9:30 AM |
+                  8:30–10:30 AM | 6:30–8:30 PM | 7:30–9:30 PM | 8:30–10:30 PM</span></div>
+              <div class="info-item"><span>👦</span><span><strong>Kids:</strong> 5:00–6:30 PM | Parents welcome |
+                  Weekend sessions ✅</span></div>
+            </div>
+            <div class="info-block">
+              <h4>Adult Packages</h4>
+              <div class="pkg-list">
+                <div class="pkg-row"><span>20 days/month</span><span>₹4,000</span></div>
+                <div class="pkg-row"><span>16 days/month</span><span>₹3,500</span></div>
+                <div class="pkg-row"><span>12 days/month</span><span>₹3,000</span></div>
+                <div class="pkg-row"><span>8 days/month</span><span>₹2,500</span></div>
+                <div class="pkg-row"><span>30 sessions / 2 months</span><span>₹5,000</span></div>
+              </div>
+              <div class="pkg-subhead">Kids Packages</div>
+              <div class="pkg-list">
+                <div class="pkg-row"><span>20 days/month</span><span>₹3,000</span></div>
+                <div class="pkg-row"><span>12 days/month</span><span>₹2,500</span></div>
+                <div class="pkg-row"><span>8 days/month</span><span>₹2,000</span></div>
+              </div>
+
+              <a href="#enroll" class="enroll-link">Book Free Demo →</a>
+
+              <div class="pkg-list">
+                <div class="pkg-subhead">Play Sessions</div>
+
+                <div class="play-block">
+
+                  <div class="play-row">
+                    <span>⏱️ Hourly Play</span>
+                    <span>₹150/hr · ₹250 / 2hr</span>
+                  </div>
+                </div>
+
+
+                <div class="play-note">
+                  6:30–8:30 AM · 6:30–10 PM
+                </div>
+
+                <div class="play-row">
+                  <span>📅 Monthly Play Pack</span>
+                  <span>₹3000 / 20 sessions</span>
+                </div>
+
+                <div class="play-note">
+                  7–9 AM · 6:30 PM–12 AM
+                </div>
+
+                <div class="play-extra">
+                  👥 Join solo or with friends — shuttles & partners provided
+                </div>
+              </div>
+            </div>
+            <a href="https://chat.whatsapp.com/GimPkYtIANpBMSL4IrFrDi?mode=ems_copy_t" target="_blank"
+              class="enroll-link">
+              Join Play Community →
+            </a>
+          </div>
+        </div>
+
+        <div class="sport-row" id="sport-archery" data-sport="archery" onclick="toggleSport(this)">
+          <div class="sport-row-header">
+            <span class="sport-icon">🏹</span>
+            <span class="sport-name">Archery</span>
+            <span class="toggle-text">More</span>
+            <span class="sport-chevron">▾</span>
+          </div>
+          <div class="sport-body">
+            <div class="info-block">
+              <h4>Timings & Location</h4>
+              <div class="info-item"><span>📍</span><span>Nava Nirman School, Annex Road, Desiyamukku, Vazhakkala</span>
+              </div>
+              <div class="info-item"><span>📅</span><span><strong>Days:</strong> Monday – Friday</span></div>
+              <div class="info-item"><span>⏰</span><span><strong>Time:</strong> 4:00 PM – 6:00 PM</span></div>
+              <div class="info-item"><span>🎯</span><span>New batches starting: <strong>May 2026</strong> — limited
+                  seats</span></div>
+            </div>
+            <div class="info-block">
+              <h4>Packages</h4>
+              <div class="pkg-list">
+                <div class="pkg-row"><span>2 days/week (8 sessions)</span><span>₹2,500</span></div>
+                <div class="pkg-row"><span>3 days/week (12 sessions)</span><span>₹3,000</span></div>
+              </div>
+            </div>
+            <a href="#enroll" class="enroll-link">Book Free Demo →</a>
+          </div>
+        </div>
+
+        <div class="sport-row" id="sport-basketball" data-sport="basketball" onclick="toggleSport(this)">
+          <div class="sport-row-header">
+            <span class="sport-icon">🏀</span>
+            <span class="sport-name">Basketball</span>
+            <span class="toggle-text">More</span>
+            <span class="sport-chevron">▾</span>
+          </div>
+          <div class="sport-body">
+            <div class="info-block">
+              <h4>Batch Timings</h4>
+              <div class="info-item"><span>👦</span><span><strong>Beginners U-15:</strong> 6:15–7:30 PM | Mon–Thu</span>
+              </div>
+              <div class="info-item"><span>🧑</span><span><strong>Beginners 15+:</strong> 5:00–6:30 PM | Fri, Sat &
+                  Sun</span></div>
+              <div class="info-item"><span>🏀</span><span><strong>Intermediate/Pro:</strong> 7:30–9:30 PM |
+                  Mon–Fri</span></div>
+            </div>
+            <div class="info-block">
+              <h4>Packages</h4>
+              <div class="pkg-list">
+                <div class="pkg-row"><span>12 Sessions</span><span>₹2,500</span></div>
+                <div class="pkg-row"><span>15 Sessions</span><span>₹3,500</span></div>
+                <div class="pkg-row"><span>20 Sessions</span><span>₹4,000</span></div>
+                <div class="pkg-row"><span>Personal Training (15)</span><span>₹5,000</span></div>
+                <div class="pkg-row"><span>Team Training / session</span><span>₹2,000</span></div>
+              </div>
+            </div>
+            <a href="#enroll" class="enroll-link">Book Free Demo →</a>
+          </div>
+        </div>
+
+        <div class="sport-row" id="sport-skating" data-sport="skating" onclick="toggleSport(this)">
+          <div class="sport-row-header">
+            <span class="sport-icon">🛼</span>
+            <span class="sport-name">Roller Skating</span>
+            <span class="toggle-text">More</span>
+            <span class="sport-chevron">▾</span>
+          </div>
+          <div class="sport-body">
+            <div class="info-block">
+              <h4>Timings & Location</h4>
+              <div class="info-item"><span>📍</span><span>Nava Nirman School, Vayu Sena Road, Kakkanad</span></div>
+              <div class="info-item"><span>⏰</span><span><strong>Time:</strong> 4:00 PM – 6:00 PM | Mon–Thu</span></div>
+              <div class="info-item"><span>👶</span><span>Kids from 3 years | Adults — no age limit!</span></div>
+            </div>
+            <div class="info-block">
+              <h4>Monthly Fees</h4>
+              <div class="pkg-list">
+                <div class="pkg-row"><span>2 sessions/week</span><span>₹2,500/mo</span></div>
+                <div class="pkg-row"><span>3 sessions/week</span><span>₹3,500/mo</span></div>
+              </div>
+            </div>
+            <a href="#enroll" class="enroll-link">Book Free Demo →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COURT BOOKING STRIP -->
+  <div class="court-strip" id="book-court">
+    <div class="container">
+      <h2>Book Your Badminton Court <em>Now</em></h2>
+      <p>Reserve your court instantly — 2 locations in Vazhakkala & Desiyamukku</p>
+      <div class="court-btns">
+        <a href="https://book.playspots.in/venues/psv-badminton-academy-shareca-lane-vazhakkala" target="_blank"
+          class="btn btn-ghost">📍 PSV Court — Vazhakkala</a>
+        <a href="https://book.playspots.in/venues/nava-sports-centre" target="_blank" class="btn btn-ghost">📍 Nava
+          Nirman Court — Desiyamukku</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="why-section" id="why">
+    <div class="container">
+      <span class="eyebrow">Why PSV</span>
+      <h2 class="section-title">Why Choose <em>Us</em></h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🏟️</div>
+          <h3>Premium Courts</h3>
+          <p>2 dedicated locations with professional flooring, lighting, and equipment — nothing compromised.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">👨‍🏫</div>
+          <h3>Certified Coaches</h3>
+          <p>Nationally certified coaches who train for progress — not just attendance. Your improvement is their
+            metric.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">👶</div>
+          <h3>All Ages, All Levels</h3>
+          <p>Dedicated batches from age 3 to adults. Whether it's your kid's first session or your comeback at 40.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎁</div>
+          <h3>Free Demo Session</h3>
+          <p>Try it before you pay. Every sport has a free first session — no obligation, no pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR Adults— conversion section -->
+  <section class="adult-section" id="adult">
+    <div class="container">
+
+      <span class="eyebrow">About PSV</span>
+      <h2 class="section-title">
+        Recreational <em>Adults Program</em>
+      </h2>
+
+      <p class="adult-intro">
+        Sport shouldn’t stop with age — it should evolve with it. PSV is built to help adults stay active, reduce
+        stress, and maintain consistency through structured programs.
+      </p>
+
+      <div class="adult-grid">
+
+        <div class="adult-card">
+          <h4>Why Adults Need This</h4>
+          <p>
+            In fast-paced lives, structured physical activity disappears — leading to
+            declining fitness, rising stress, and limited social engagement.
+          </p>
+        </div>
+
+        <div class="adult-card">
+          <h4>What PSV Does</h4>
+          <p>
+            We bring back consistency through structured programs designed for adults —
+            helping you stay active, competitive, and mentally refreshed.
+          </p>
+        </div>
+
+        <div class="adult-card">
+          <h4>Beyond Just Sport</h4>
+          <p>
+            This isn’t just training. It’s about building healthier lifestyles,
+            stronger communities, and long-term habits.
+          </p>
+        </div>
+
+        <div class="adult-card">
+          <h4>The Bigger Impact</h4>
+          <p>
+            When adults stay active, they become role models — inspiring the next
+            generation to stay connected to sport.
+          </p>
+        </div>
+
+        <a href="#enroll" class="btn btn-gold" style="margin-top:30px;">
+          Start Your First Session →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About us -->
+
+  <section class="about-section" id="about">
+    <div class="container">
+
+      <span class="eyebrow">About Us</span>
+
+      <h2 class="section-title">
+        What is <em>PSV?</em>
+      </h2>
+
+      <p class="about-text">
+        Pro Sports Ventures (PSV) is a sports management and consulting company delivering structured,
+        program-driven training and play experiences for individuals of all ages, genders, and skill levels.
+      </p>
+
+      <p class="about-text">
+        We focus on consistency over pay-per-use access — helping individuals build routine,
+        improve performance, and stay engaged with sport long-term.
+      </p>
+
+      <p class="about-text">
+        Built on inclusivity, PSV creates a supportive environment through professionally guided coaching
+        and well-organized play sessions that strengthen overall sporting culture.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <span class="eyebrow">Got Questions?</span>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Is there a free trial before joining? <span>+</span></div>
+          <div class="faq-a">Yes — every sport at PSV offers a free demo session. Fill in the form or call us and we'll
+            schedule it for you at no cost.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What age groups do you accept? <span>+</span></div>
+          <div class="faq-a">We welcome everyone — from kids aged 3 years (Roller Skating) to adults of any age.
+            Dedicated batches for every group.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Do I need to bring my own equipment? <span>+</span></div>
+          <div class="faq-a">No. All equipment is provided for beginner sessions. For Archery and Roller Skating, gear
+            is included for your first sessions.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Can I switch batches or timing slots? <span>+</span></div>
+          <div class="faq-a">Yes, subject to availability. Just WhatsApp us at +91 9509502000 and we'll sort it out for
+            you.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How do I book a badminton court? <span>+</span></div>
+          <div class="faq-a">Book instantly via Playspots at book.playspots.in, or call +91 9509502000 for group and
+            monthly bookings.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <div class="contact-strip-left">
+      <h2>Ready to Start?</h2>
+      <p>Call or WhatsApp — we'll set up your free demo today</p>
+    </div>
+    <div class="contact-strip-right">
+      <div class="label">Find Us</div>
+      <div class="addr">📍 PSV Badminton Court, Shareca Lane,<br>Behind Joy Alukkas Gold Tower, Vazhakkala<br>📞
+        9509502000</div>
+      <a href="https://maps.app.goo.gl/SQ7LZMtDhCpwepsh6" target="_blank" class="maps-btn">View on Maps →</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="transparent.png" alt="PSV"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <span class="footer-logo-text">PSV</span>
+    </div>
+    <p>© 2026 Pro Sports Ventures, Kochi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function setSportState(row, shouldOpen) {
+      row.classList.toggle('open', shouldOpen);
+      row.querySelector('.toggle-text').textContent = shouldOpen ? 'Less' : 'More';
+    }
+
+    function toggleSport(row) {
+      const isOpen = row.classList.contains('open');
+
+      document.querySelectorAll('.sport-row').forEach(r => {
+        if (r !== row) {
+          setSportState(r, false);
+        }
+      });
+
+      setSportState(row, !isOpen);
+    }
+
+    function openSport(sportName) {
+      const row = document.querySelector(`.sport-row[data-sport="${sportName}"]`);
+      if (!row) return;
+
+      document.querySelectorAll('.sport-row').forEach(r => setSportState(r, r === row));
+
+      setTimeout(() => {
+        row.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 120);
+    }
+
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+      if (!open) item.classList.add('open');
+    }
+
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('#navLinks a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    // Shrink nav on scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── COUNTRY CODE PICKER ──
+    const COUNTRIES = [
+      { f: '🇦🇫', n: 'Afghanistan', d: '+93' }, { f: '🇦🇱', n: 'Albania', d: '+355' }, { f: '🇩🇿', n: 'Algeria', d: '+213' },
+      { f: '🇦🇩', n: 'Andorra', d: '+376' }, { f: '🇦🇴', n: 'Angola', d: '+244' }, { f: '🇦🇬', n: 'Antigua & Barbuda', d: '+1-268' },
+      { f: '🇦🇷', n: 'Argentina', d: '+54' }, { f: '🇦🇲', n: 'Armenia', d: '+374' }, { f: '🇦🇺', n: 'Australia', d: '+61' },
+      { f: '🇦🇹', n: 'Austria', d: '+43' }, { f: '🇦🇿', n: 'Azerbaijan', d: '+994' }, { f: '🇧🇸', n: 'Bahamas', d: '+1-242' },
+      { f: '🇧🇭', n: 'Bahrain', d: '+973' }, { f: '🇧🇩', n: 'Bangladesh', d: '+880' }, { f: '🇧🇧', n: 'Barbados', d: '+1-246' },
+      { f: '🇧🇾', n: 'Belarus', d: '+375' }, { f: '🇧🇪', n: 'Belgium', d: '+32' }, { f: '🇧🇿', n: 'Belize', d: '+501' },
+      { f: '🇧🇯', n: 'Benin', d: '+229' }, { f: '🇧🇹', n: 'Bhutan', d: '+975' }, { f: '🇧🇴', n: 'Bolivia', d: '+591' },
+      { f: '🇧🇦', n: 'Bosnia & Herzegovina', d: '+387' }, { f: '🇧🇼', n: 'Botswana', d: '+267' }, { f: '🇧🇷', n: 'Brazil', d: '+55' },
+      { f: '🇧🇳', n: 'Brunei', d: '+673' }, { f: '🇧🇬', n: 'Bulgaria', d: '+359' }, { f: '🇧🇫', n: 'Burkina Faso', d: '+226' },
+      { f: '🇧🇮', n: 'Burundi', d: '+257' }, { f: '🇨🇻', n: 'Cabo Verde', d: '+238' }, { f: '🇰🇭', n: 'Cambodia', d: '+855' },
+      { f: '🇨🇲', n: 'Cameroon', d: '+237' }, { f: '🇨🇦', n: 'Canada', d: '+1' }, { f: '🇨🇫', n: 'Central African Rep.', d: '+236' },
+      { f: '🇹🇩', n: 'Chad', d: '+235' }, { f: '🇨🇱', n: 'Chile', d: '+56' }, { f: '🇨🇳', n: 'China', d: '+86' },
+      { f: '🇨🇴', n: 'Colombia', d: '+57' }, { f: '🇰🇲', n: 'Comoros', d: '+269' }, { f: '🇨🇬', n: 'Congo', d: '+242' },
+      { f: '🇨🇷', n: 'Costa Rica', d: '+506' }, { f: '🇭🇷', n: 'Croatia', d: '+385' }, { f: '🇨🇺', n: 'Cuba', d: '+53' },
+      { f: '🇨🇾', n: 'Cyprus', d: '+357' }, { f: '🇨🇿', n: 'Czech Republic', d: '+420' }, { f: '🇩🇰', n: 'Denmark', d: '+45' },
+      { f: '🇩🇯', n: 'Djibouti', d: '+253' }, { f: '🇩🇴', n: 'Dominican Republic', d: '+1-809' }, { f: '🇪🇨', n: 'Ecuador', d: '+593' },
+      { f: '🇪🇬', n: 'Egypt', d: '+20' }, { f: '🇸🇻', n: 'El Salvador', d: '+503' }, { f: '🇬🇶', n: 'Equatorial Guinea', d: '+240' },
+      { f: '🇪🇷', n: 'Eritrea', d: '+291' }, { f: '🇪🇪', n: 'Estonia', d: '+372' }, { f: '🇸🇿', n: 'Eswatini', d: '+268' },
+      { f: '🇪🇹', n: 'Ethiopia', d: '+251' }, { f: '🇫🇯', n: 'Fiji', d: '+679' }, { f: '🇫🇮', n: 'Finland', d: '+358' },
+      { f: '🇫🇷', n: 'France', d: '+33' }, { f: '🇬🇦', n: 'Gabon', d: '+241' }, { f: '🇬🇲', n: 'Gambia', d: '+220' },
+      { f: '🇬🇪', n: 'Georgia', d: '+995' }, { f: '🇩🇪', n: 'Germany', d: '+49' }, { f: '🇬🇭', n: 'Ghana', d: '+233' },
+      { f: '🇬🇷', n: 'Greece', d: '+30' }, { f: '🇬🇹', n: 'Guatemala', d: '+502' }, { f: '🇬🇳', n: 'Guinea', d: '+224' },
+      { f: '🇬🇼', n: 'Guinea-Bissau', d: '+245' }, { f: '🇬🇾', n: 'Guyana', d: '+592' }, { f: '🇭🇹', n: 'Haiti', d: '+509' },
+      { f: '🇭🇳', n: 'Honduras', d: '+504' }, { f: '🇭🇰', n: 'Hong Kong', d: '+852' }, { f: '🇭🇺', n: 'Hungary', d: '+36' },
+      { f: '🇮🇸', n: 'Iceland', d: '+354' }, { f: '🇮🇳', n: 'India', d: '+91' }, { f: '🇮🇩', n: 'Indonesia', d: '+62' },
+      { f: '🇮🇷', n: 'Iran', d: '+98' }, { f: '🇮🇶', n: 'Iraq', d: '+964' }, { f: '🇮🇪', n: 'Ireland', d: '+353' },
+      { f: '🇮🇱', n: 'Israel', d: '+972' }, { f: '🇮🇹', n: 'Italy', d: '+39' }, { f: '🇯🇲', n: 'Jamaica', d: '+1-876' },
+      { f: '🇯🇵', n: 'Japan', d: '+81' }, { f: '🇯🇴', n: 'Jordan', d: '+962' }, { f: '🇰🇿', n: 'Kazakhstan', d: '+7' },
+      { f: '🇰🇪', n: 'Kenya', d: '+254' }, { f: '🇰🇼', n: 'Kuwait', d: '+965' }, { f: '🇰🇬', n: 'Kyrgyzstan', d: '+996' },
+      { f: '🇱🇦', n: 'Laos', d: '+856' }, { f: '🇱🇻', n: 'Latvia', d: '+371' }, { f: '🇱🇧', n: 'Lebanon', d: '+961' },
+      { f: '🇱🇸', n: 'Lesotho', d: '+266' }, { f: '🇱🇷', n: 'Liberia', d: '+231' }, { f: '🇱🇾', n: 'Libya', d: '+218' },
+      { f: '🇱🇮', n: 'Liechtenstein', d: '+423' }, { f: '🇱🇹', n: 'Lithuania', d: '+370' }, { f: '🇱🇺', n: 'Luxembourg', d: '+352' },
+      { f: '🇲🇴', n: 'Macau', d: '+853' }, { f: '🇲🇬', n: 'Madagascar', d: '+261' }, { f: '🇲🇼', n: 'Malawi', d: '+265' },
+      { f: '🇲🇾', n: 'Malaysia', d: '+60' }, { f: '🇲🇻', n: 'Maldives', d: '+960' }, { f: '🇲🇱', n: 'Mali', d: '+223' },
+      { f: '🇲🇹', n: 'Malta', d: '+356' }, { f: '🇲🇷', n: 'Mauritania', d: '+222' }, { f: '🇲🇺', n: 'Mauritius', d: '+230' },
+      { f: '🇲🇽', n: 'Mexico', d: '+52' }, { f: '🇲🇩', n: 'Moldova', d: '+373' }, { f: '🇲🇨', n: 'Monaco', d: '+377' },
+      { f: '🇲🇳', n: 'Mongolia', d: '+976' }, { f: '🇲🇪', n: 'Montenegro', d: '+382' }, { f: '🇲🇦', n: 'Morocco', d: '+212' },
+      { f: '🇲🇿', n: 'Mozambique', d: '+258' }, { f: '🇲🇲', n: 'Myanmar', d: '+95' }, { f: '🇳🇦', n: 'Namibia', d: '+264' },
+      { f: '🇳🇵', n: 'Nepal', d: '+977' }, { f: '🇳🇱', n: 'Netherlands', d: '+31' }, { f: '🇳🇿', n: 'New Zealand', d: '+64' },
+      { f: '🇳🇮', n: 'Nicaragua', d: '+505' }, { f: '🇳🇪', n: 'Niger', d: '+227' }, { f: '🇳🇬', n: 'Nigeria', d: '+234' },
+      { f: '🇲🇰', n: 'North Macedonia', d: '+389' }, { f: '🇳🇴', n: 'Norway', d: '+47' }, { f: '🇴🇲', n: 'Oman', d: '+968' },
+      { f: '🇵🇰', n: 'Pakistan', d: '+92' }, { f: '🇵🇦', n: 'Panama', d: '+507' }, { f: '🇵🇬', n: 'Papua New Guinea', d: '+675' },
+      { f: '🇵🇾', n: 'Paraguay', d: '+595' }, { f: '🇵🇪', n: 'Peru', d: '+51' }, { f: '🇵🇭', n: 'Philippines', d: '+63' },
+      { f: '🇵🇱', n: 'Poland', d: '+48' }, { f: '🇵🇹', n: 'Portugal', d: '+351' }, { f: '🇶🇦', n: 'Qatar', d: '+974' },
+      { f: '🇷🇴', n: 'Romania', d: '+40' }, { f: '🇷🇺', n: 'Russia', d: '+7' }, { f: '🇷🇼', n: 'Rwanda', d: '+250' },
+      { f: '🇸🇦', n: 'Saudi Arabia', d: '+966' }, { f: '🇸🇳', n: 'Senegal', d: '+221' }, { f: '🇷🇸', n: 'Serbia', d: '+381' },
+      { f: '🇸🇱', n: 'Sierra Leone', d: '+232' }, { f: '🇸🇬', n: 'Singapore', d: '+65' }, { f: '🇸🇰', n: 'Slovakia', d: '+421' },
+      { f: '🇸🇮', n: 'Slovenia', d: '+386' }, { f: '🇸🇴', n: 'Somalia', d: '+252' }, { f: '🇿🇦', n: 'South Africa', d: '+27' },
+      { f: '🇸🇸', n: 'South Sudan', d: '+211' }, { f: '🇪🇸', n: 'Spain', d: '+34' }, { f: '🇱🇰', n: 'Sri Lanka', d: '+94' },
+      { f: '🇸🇩', n: 'Sudan', d: '+249' }, { f: '🇸🇷', n: 'Suriname', d: '+597' }, { f: '🇸🇪', n: 'Sweden', d: '+46' },
+      { f: '🇨🇭', n: 'Switzerland', d: '+41' }, { f: '🇸🇾', n: 'Syria', d: '+963' }, { f: '🇹🇼', n: 'Taiwan', d: '+886' },
+      { f: '🇹🇯', n: 'Tajikistan', d: '+992' }, { f: '🇹🇿', n: 'Tanzania', d: '+255' }, { f: '🇹🇭', n: 'Thailand', d: '+66' },
+      { f: '🇹🇱', n: 'Timor-Leste', d: '+670' }, { f: '🇹🇬', n: 'Togo', d: '+228' }, { f: '🇹🇹', n: 'Trinidad & Tobago', d: '+1-868' },
+      { f: '🇹🇳', n: 'Tunisia', d: '+216' }, { f: '🇹🇷', n: 'Turkey', d: '+90' }, { f: '🇹🇲', n: 'Turkmenistan', d: '+993' },
+      { f: '🇺🇬', n: 'Uganda', d: '+256' }, { f: '🇺🇦', n: 'Ukraine', d: '+380' }, { f: '🇦🇪', n: 'United Arab Emirates', d: '+971' },
+      { f: '🇬🇧', n: 'United Kingdom', d: '+44' }, { f: '🇺🇸', n: 'United States', d: '+1' }, { f: '🇺🇾', n: 'Uruguay', d: '+598' },
+      { f: '🇺🇿', n: 'Uzbekistan', d: '+998' }, { f: '🇻🇪', n: 'Venezuela', d: '+58' }, { f: '🇻🇳', n: 'Vietnam', d: '+84' },
+      { f: '🇾🇪', n: 'Yemen', d: '+967' }, { f: '🇿🇲', n: 'Zambia', d: '+260' }, { f: '🇿🇼', n: 'Zimbabwe', d: '+263' }
+    ];
+
+    let selectedDial = '+91';
+
+    function renderCCList(filter = '') {
+      const list = document.getElementById('ccList');
+      const q = filter.toLowerCase();
+      const filtered = COUNTRIES.filter(c =>
+        c.n.toLowerCase().includes(q) || c.d.includes(q)
+      );
+      if (!filtered.length) {
+        list.innerHTML = '<div class="cc-empty">No results</div>';
+        return;
+      }
+      list.innerHTML = filtered.map(c => `
+        <div class="cc-option${c.d === selectedDial ? ' active' : ''}" data-dial="${c.d}" data-flag="${c.f}">
+          <span>${c.f} ${c.n}</span>
+          <span class="cc-dial">${c.d}</span>
+        </div>
+      `).join('');
+      list.querySelectorAll('.cc-option').forEach(el => {
+        el.addEventListener('click', () => {
+          selectedDial = el.dataset.dial;
+          document.getElementById('fcountry').value = selectedDial;
+          document.getElementById('ccTrigger').textContent = el.dataset.flag + ' ' + selectedDial;
+          closeCCDropdown();
+        });
+      });
+    }
+
+    function closeCCDropdown() {
+      document.getElementById('ccDropdown').classList.remove('open');
+      document.getElementById('ccTrigger').classList.remove('open');
+      document.getElementById('ccSearch').value = '';
+      renderCCList();
+    }
+
+    document.getElementById('ccTrigger').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const dd = document.getElementById('ccDropdown');
+      const tr = document.getElementById('ccTrigger');
+      const isOpen = dd.classList.contains('open');
+      if (isOpen) { closeCCDropdown(); return; }
+      dd.classList.add('open');
+      tr.classList.add('open');
+      renderCCList();
+      setTimeout(() => document.getElementById('ccSearch').focus(), 50);
+    });
+
+    document.getElementById('ccSearch').addEventListener('input', (e) => {
+      renderCCList(e.target.value);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!document.getElementById('ccPicker').contains(e.target)) closeCCDropdown();
+    });
+
+    renderCCList(); // init
+
+    // Form submit
+    document.getElementById('leadForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const name = document.getElementById('fname').value.trim();
+      const phone = document.getElementById('fphone').value.trim();
+      const countryCode = document.getElementById('fcountry').value;
+      const sport = document.getElementById('fsport').value;
+      const loc = document.getElementById('flocation').value.trim();
+      if (!name || !phone || !sport) {
+        alert("Please fill all required fields");
+        return;
+      }
+
+      const submitBtn = document.querySelector('.form-submit');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch('https://api.prosportsventures.in/submit-lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name,
+            phone: countryCode.replace('+', '').replace('-CA', '') + phone,
+            sport: sport,
+            location: loc
+          })
+        });
+
+
+
+        if (response.ok) {
+          document.getElementById('leadForm').style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          alert("Failed to submit form. Please try again.");
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      } catch (error) {
+        console.error("Submission error:", error);
+        alert("Error submitting form. Please check your connection and try again.");
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+  <a href="https://wa.me/919509502000" target="_blank" class="wa-float" aria-label="WhatsApp PSV">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+</body>
+
+</html>
